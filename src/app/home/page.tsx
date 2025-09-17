@@ -14,6 +14,7 @@ import { useRouter } from 'next/navigation'
 import { AlertDialogDemo } from './Alert'
 
 export default function Page() {
+  const router = useRouter()
   const [task, setTask] = useState('')
   const [editingId, setEditingId] = useState<number | null>(null)
   const [editingText, setEditingText] = useState('')
@@ -34,7 +35,7 @@ export default function Page() {
   })
 
   // Mutations
-  const addMutation = useMutation({
+  const addMutation = useMutation({ 
     mutationFn: addTodo,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todos'] })

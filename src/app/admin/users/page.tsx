@@ -11,7 +11,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+  } from "@/components/ui/table"
 import { Pencil, Trash2, Save, X } from "lucide-react"
 
 interface User {
